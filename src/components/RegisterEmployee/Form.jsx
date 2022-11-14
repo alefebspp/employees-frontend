@@ -2,10 +2,9 @@ import { useForm } from 'react-hook-form';
 import { Input } from '@chakra-ui/react';
 import Title from '../common/Title';
 import { FaUserPlus } from 'react-icons/fa';
-import { usePostEmployeeMutation } from '../../features/api/apiSlice';
 import '../../styles/css/RegisterEmployee.css';
-import useToastMessage from '../../hooks/useToastMessage';
 import ConditionalButton from '../common/ConditionalButton';
+import useEmployee from '../../hooks/useEmployee';
 
 const Form = () => {
   const {
@@ -23,38 +22,14 @@ const Form = () => {
     },
     mode: 'onChange'
   });
-
-  const [postEmployee] = usePostEmployeeMutation();
-  const { handleToastSuccessMessage, handleToastErrorMessage } =
-    useToastMessage();
-  const handlePostEmployee = data => {
-    try {
-      postEmployee({
-        firstName: data.firstName,
-        lastName: data.lastName,
-        age: data.age,
-        profession: data.profession,
-        sector: data.sector
-      });
-      reset();
-      handleToastSuccessMessage(
-        'Funcionário cadastrado!',
-        'O funcionário foi criado com sucesso!'
-      );
-    } catch (error) {
-      handleToastErrorMessage(
-        'Impossível Cadastrar...',
-        'Foi impossível cadastrar o funcionário.'
-      );
-    }
-  };
+  const { handlePostEmployee } = useEmployee();
 
   return (
     <div className="register">
       <Title title="Registre um funcionário" icon={FaUserPlus} />
       <form
         id="form"
-        onSubmit={handleSubmit(data => handlePostEmployee(data))}
+        onSubmit={handleSubmit(data => handlePostEmployee(data, reset))}
         className="registerForm"
         action=""
       >

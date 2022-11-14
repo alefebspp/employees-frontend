@@ -1,36 +1,28 @@
-import {
-  useDeleteEmployeesMutation,
-  useGetEmployeesQuery
-} from '../../features/api/apiSlice';
+import { useGetEmployeesQuery } from '../../features/api/apiSlice';
 import '../../styles/css/Main.css';
 import { useState } from 'react';
 import Employee from './Employee';
 import { Button } from '@chakra-ui/react';
 import { FaTrashAlt } from 'react-icons/fa';
+import useEmployee from '../../hooks/useEmployee';
 const EmployeesList = () => {
   const { data } = useGetEmployeesQuery();
-  const [deleteEmployees] = useDeleteEmployeesMutation();
   const [selected, setSelected] = useState([]);
+  const { handleDeleteEmployees } = useEmployee();
 
   const handleChange = event => {
     const { checked, value } = event.currentTarget;
-
     setSelected(prev =>
       checked ? [...prev, value] : prev.filter(val => val !== value)
     );
   };
-
-  function handleDeleteEmployees() {
-    deleteEmployees({ ids: selected });
-    setSelected([]);
-  }
 
   return (
     <div className="employees">
       {selected.length > 0 ? (
         <Button
           leftIcon={<FaTrashAlt />}
-          onClick={handleDeleteEmployees}
+          onClick={() => handleDeleteEmployees(selected, setSelected)}
           colorScheme="red"
           variant="solid"
         >
