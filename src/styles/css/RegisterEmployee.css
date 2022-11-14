@@ -1,0 +1,60 @@
+.register {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.register__titleGroup {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+.register__titleGroup__title {
+  font-weight: 500;
+}
+
+.registerForm {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  border: 2px solid #06283D;
+  padding: 3rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+.registerForm__disabledButton {
+  border: 2px solid #A9A9A9;
+  color: #A9A9A9;
+  font-weight: 500;
+  width: 10rem;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+.registerForm__button {
+  background-color: #06283D;
+  color: white;
+  font-weight: 500;
+  width: 10rem;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+.registerForm__input {
+  display: flex;
+  flex-direction: column;
+}
+.registerForm__input__error {
+  font-size: 0.7rem;
+  color: red;
+  font-weight: 600;
+}
+.registerForm__input__label {
+  font-weight: 700;
+}/*# sourceMappingURL=RegisterEmployee.css.map */

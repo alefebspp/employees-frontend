@@ -1,0 +1,58 @@
+@use './styles';
+
+.register{
+  width: 100vw;
+  @include styles.center-elements();
+  flex-direction: column;
+
+  &__titleGroup{
+    display: flex;
+    @include styles.center-elements();
+    padding: 2rem;
+    gap: 1rem;
+    &__title{
+      font-weight: 500;
+    }
+  }
+}
+
+
+.registerForm{
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  border: 2px solid #06283D;
+  padding: 3rem;
+  border-radius: 10px;
+  @include styles.center-elements();
+  gap: 1rem;
+  flex-direction: column;
+  &__disabledButton{
+    border: 2px solid #A9A9A9;
+    color: #A9A9A9;
+    font-weight: 500;
+    width: 10rem;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  }
+  &__button{
+    background-color: #06283D;
+    color: white;
+    font-weight: 500;
+    width: 10rem;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  }
+  &__input{
+    display: flex;
+    flex-direction: column;
+    &__error{
+      font-size: styles.$mobile-font-size;
+      color: red;
+      font-weight: 600;
+    }
+    &__label{
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.header {
+  background-color: #06283D;
+  width: 100vw;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+.header__iconGroup {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}/*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,92 @@
+.employees {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.employee {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #E0E0E0;
+  width: 20rem;
+}
+.employee__nameGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.employee__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 10rem;
+}
+.employee__name {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.employee__sectorGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  justify-content: space-between;
+}
+.employee__sector {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.employee__iconGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.employee__dark {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #C8C8C8;
+  width: 20rem;
+}
+
+.employeeInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.employeeInfo__infos {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.employeeInfo__info {
+  background-color: #D3D3D3;
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+.employeeInfo__info__text {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.employeeInfo__info__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}/*# sourceMappingURL=Main.css.map */
