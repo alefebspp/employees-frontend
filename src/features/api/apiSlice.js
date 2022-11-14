@@ -2,7 +2,9 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3333' }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: 'https://employees-app-backend.herokuapp.com'
+  }),
   endpoints: builder => ({
     getEmployees: builder.query({
       query: () => '/employee/all',
